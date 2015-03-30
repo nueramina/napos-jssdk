@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>Library Example Page</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
+    <style>
+      html, body {
+        padding: 0;
+        margin: 0;
+      }
+
+      #control-panel {
+        position: fixed;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        width: 240px;
+        bottom: 0;
+        padding: 10px;
+        border-right: 1px solid #999;
+        overflow-y: scroll;
+      }
+
+      #wrapper {
+        position: fixed;
+        top: 0;
+        left: 240px;
+        right: 0;
+        bottom: 0;
+        margin: 10px;
+      }
+
+      #wrapper iframe {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="control-panel">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="embedUrl" type="text" value="demo.html">
+          <label for="embedUrl">URL</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="token" type="text" value="b43ac">
+          <label for="token">TOKEN</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="appId" type="text" value="napos_stats_mobile">
+          <label for="appId">App ID</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <label for="runtime">Runtime</label>
+          <select id="runtime">
+            <option value="" disabled>Choose your option</option>
+            <option value="mobile" selected>Mobile</option>
+            <option value="pc">PC</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="profile" class="materialize-textarea">{
+  "username": "napos_test",
+  "imageUrl": "http://fuss10.elemecdn.com/b/44/6215fe9279d4a14126cd2f28eeaecjpeg.jpeg",
+  "mobile": "13871776575"
+}</textarea>
+          <label for="profile">Profile</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="allRestaurants" class="materialize-textarea">[{
+  "oid": "123123",
+  "name": "肯德基",
+  "address": "金沙江西路1234号"
+}, {
+  "oid": "456456",
+  "name": "麦当劳",
+  "address": "真北路4567号"
+}]</textarea>
+          <label for="allRestaurants">All Restaurants</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="currentRestaurantId" type="text" value="456456">
+          <label for="currentRestaurantId">Current Restaurant Id</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="stats" class="materialize-textarea">{
+  "online": 123,
+  "cash": 321,
+  "subsidy": 1234,
+  "ordersCount": 20
+}</textarea>
+          <label for="stats">Stats</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+          <button id="confirm" class="btn waves-effect waves-light">Comfirm
+            <i class="mdi-content-send right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="wrapper">
+      <iframe id="embed" src="demo.html" frameborder="0"></iframe>
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+    <script src="simulator.js"></script>
+  </body>
+</html>
