@@ -1,0 +1,17 @@
+{
+  "name": "napos-jssdk",
+  "main": "dist/napos-jssdk.js",
+  "version": "0.1.0",
+  "authors": [
+    "Xu Hang <hang.xu@ele.me>"
+  ],
+  "description": "Napos Client JS-SDK",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

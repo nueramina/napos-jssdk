@@ -1,11 +1,7 @@
 {
-  "name": "library-seed",
-  "version": "0.0.1",
-  "description": "Library starter using CommonJS",
-  "repository": {
-    "type": "git",
-    "url": "git://git@gitlab.npdev.io:melody/library-seed.git"
-  },
+  "name": "napos-jssdk",
+  "version": "0.1.0",
+  "description": "Napos Client JS-SDK",
   "main": "index.js",
   "browserify": {},
   "browserify-shim": {},
