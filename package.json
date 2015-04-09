@@ -1,6 +1,6 @@
 {
   "name": "napos-jssdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Napos Client JS-SDK",
   "main": "index.js",
   "browserify": {},

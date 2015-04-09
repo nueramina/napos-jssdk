@@ -1,9 +1,6 @@
 var crypto = require('crypto');
 var _ = require('lodash');
 var debug = require('debug')('simulator');
-
-window.naposRuntime = 'mobile';
-
 var fixture = {};
 var $confirmBtn = $('#confirm');
 var $embedIFrame = $('#embed');
@@ -21,7 +18,7 @@ function confirm(isReload) {
   fixture.appId = $('#appId').val();
   fixture.embedUrl = $('#embedUrl').val();
 
-  window.naposRuntime = fixture.runtime = $('#runtime').val();
+  fixture.runtime = $('#runtime').val();
   fixture.profile = JSON.parse($('#profile').val());
   fixture.allRestaurants = JSON.parse($('#allRestaurants').val());
   fixture.stats = JSON.parse($('#stats').val());
@@ -78,6 +75,10 @@ function onMessage(event) {
           message: 'signature not match'
         }));
       }
+      break;
+
+    case 'open.runtime.get':
+      send(new InvokeResponse(invokeResponsePacket.id, fixture.runtime));
       break;
 
     case 'open.profile.get':

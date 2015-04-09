@@ -10,7 +10,6 @@ document.getElementById('getAllRestaurants').addEventListener('click', getAllRes
 document.getElementById('getCurrentRestaurant').addEventListener('click', getCurrentRestaurant);
 document.getElementById('getStats').addEventListener('click', getStats);
 document.getElementById('getRuntime').addEventListener('click', getRuntime);
-document.getElementById('getTime').addEventListener('click', getTime);
 
 function initSdk() {
   var checkArr, checkStr, signature;
@@ -91,16 +90,12 @@ function getStats() {
 }
 
 function getRuntime() {
-  debug('got runtime', napos.getRuntime());
-}
-
-function getTime() {
-  napos.getTime(function(err, result) {
+  napos.getRuntime(function(err, result) {
     if (err) {
       debug(err);
       return;
     }
-    debug('got time', result);
+    debug('got runtime', result);
   });
 }
 
