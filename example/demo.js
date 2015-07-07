@@ -1,7 +1,6 @@
 'use strict';
 
 var crypto = require('crypto');
-var debug = require('debug')('demo');
 
 document.getElementById('initSdk').addEventListener('click', initSdk);
 document.getElementById('generateSignature').addEventListener('click', generateSignature);
@@ -32,70 +31,70 @@ function initSdk() {
     signature: signature
   }, function(err) {
     if (err) {
-      debug('init err', err);
+      console.log('init err', err);
       return;
     }
-    debug('init success');
+    console.log('init success');
   });
 }
 
 function generateSignature() {
   napos.generateSignature('napos_stats_mobile', function(err, result) {
     if (err) {
-      debug(err);
+      console.log(err);
       return;
     }
-    debug('signature generate success', result);
+    console.log('signature generate success', result);
   });
 }
 
 function getProfile() {
   napos.getProfile(function(err, result) {
     if (err) {
-      debug(err);
+      console.log(err);
       return;
     }
-    debug('got profile', result);
+    console.log('got profile', result);
   });
 }
 
 function getAllRestaurants() {
   napos.getAllRestaurants(function(err, result) {
     if (err) {
-      debug(err);
+      console.log(err);
       return;
     }
-    debug('got all restaurants', result);
+    console.log('got all restaurants', result);
   });
 }
 
 function getCurrentRestaurant() {
   napos.getCurrentRestaurant(function(err, result) {
     if (err) {
-      debug(err);
+      console.log(err);
       return;
     }
-    debug('got current restaurants', result);
+    console.log('got current restaurants', result);
   });
 }
 
 function getStats() {
   napos.getStats('2015-03-21', function(err, result) {
     if (err) {
-      debug(err);
+      console.log(err);
       return;
     }
-    debug('got stats', result);
+    console.log('got stats', result);
   });
 }
 
 function getRuntime() {
   napos.getRuntime(function(err, result) {
     if (err) {
-      debug(err);
+      console.log(err);
       return;
     }
-    debug('got runtime', result);
+    console.log('got runtime', result);
   });
 }
 
