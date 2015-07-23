@@ -40,7 +40,7 @@ ns.registerHandler('restaurant.get', function() {
 
 angular.module('SimulatorApp', ['ngMaterial'])
   .controller('AppCtrl', ['$scope', '$mdDialog', '$sce', function($scope, $mdDialog, $sce) {
-    $scope.appUrl = Config.get().url;
+    $scope.appUrl = $sce.trustAsResourceUrl(Config.get().url);
 
     $scope.openCtrlDialog = function(ev) {
       $mdDialog.show({
