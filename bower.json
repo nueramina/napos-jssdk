@@ -1,7 +1,7 @@
 {
   "name": "napos-jssdk",
   "main": "dist/napos-jssdk.js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "authors": [
     "Xu Hang <hang.xu@ele.me>"
   ],
