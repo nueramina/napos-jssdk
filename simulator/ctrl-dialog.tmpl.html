@@ -1,0 +1,59 @@
+<md-dialog aria-label="Simulator" flex="66">
+  <form>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Simulator</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        X
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+   <form name="projectForm">
+     <md-input-container>
+       <label>URL</label>
+       <input required ng-model="conf.url">
+     </md-input-container>
+     <md-input-container>
+       <label>TOKEN</label>
+       <input required ng-model="conf.token">
+     </md-input-container>
+     <div layout layout-sm="column">
+       <md-input-container flex>
+         <label>User ID</label>
+         <input ng-model="conf.profile.userId">
+       </md-input-container>
+       <md-input-container flex>
+         <label>Username</label>
+         <input ng-model="conf.profile.username">
+       </md-input-container>
+     </div>
+     <div layout layout-sm="column">
+       <md-input-container flex>
+         <label>Restaurant ID</label>
+         <input ng-model="conf.restaurant.id">
+       </md-input-container>
+       <md-input-container flex>
+         <label>Restaurant Name</label>
+         <input ng-model="conf.restaurant.name">
+       </md-input-container>
+     </div>
+     <md-input-container>
+       <label>Restaurant Image URL</label>
+       <input ng-model="conf.restaurant.imageUrl">
+     </md-input-container>
+     <md-input-container>
+       <label>Restaurant Address</label>
+       <input ng-model="conf.restaurant.address">
+     </md-input-container>
+   </form>
+  </md-dialog-content>
+  <div class="md-actions" layout="row">
+    <span flex></span>
+    <md-button ng-click="confirm(conf)" class="md-primary">
+      Confirm
+    </md-button>
+  </div>
+  </form>
+</md-dialog>

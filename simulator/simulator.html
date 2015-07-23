@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="SimulatorApp">
+  <head>
+    <title>Library Example Page</title>
+    <!-- Compiled and minified CSS -->
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="simulator.css">
+  </head>
+
+  <body layout="column" ng-controller="AppCtrl">
+    <md-button class="md-raised md-primary btn-fixed"
+               ng-click="openCtrlDialog()">Ctrl</md-button>
+
+    <iframe ng-src="{{appUrl}}" frameborder="0" app-id="foo.bar" flex></iframe>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="simulator.js"></script>
+  </body>
+</html>
