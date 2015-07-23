@@ -1,7 +1,7 @@
 {
   "name": "napos-jssdk",
   "main": "dist/napos-jssdk.js",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "authors": [
     "Xu Hang <hang.xu@ele.me>"
   ],
@@ -13,5 +13,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "angular-material": "~0.10.0",
+    "jquery": "~2.1.4"
+  }
 }

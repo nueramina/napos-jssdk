@@ -2,6 +2,8 @@ var tmp = "./.tmp";
 var dist = "./dist";
 var src = './lib';
 var example = './example';
+var simulator = './simulator';
+var bowerComponents = './bower_components';
 
 module.exports = {
   browserSync: {
@@ -9,11 +11,14 @@ module.exports = {
       // We're serving the src folder as well
       // for sass sourcemap linking
       index: "simulator.html",
-      baseDir: [tmp, example, dist]
+      baseDir: [tmp, example, simulator, './']
     },
     files: [
       example + "/**",
+      simulator + "/**",
       tmp + "/**",
+      dist + "/**",
+      bowerComponents + "/**",
       // Exclude Map files
       "!" + example + "/**.map"
     ]
@@ -33,7 +38,7 @@ module.exports = {
       dest: tmp,
       outputName: 'demo.js'
     }, {
-      entries: example + '/simulator.js',
+      entries: simulator + '/simulator.js',
       dest: tmp,
       outputName: 'simulator.js'
     }, {
