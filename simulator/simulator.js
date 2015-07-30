@@ -20,8 +20,9 @@ ns.on('connection', function(connection) {
   console.log('new connection');
 });
 
-ns.registerHandler('signature.generate', function() {
+ns.registerHandler('$.signature.generate', function(params) {
   setTimeout(function() {
+    this.bindAppId(params.appId);
     this.res(Config.get().token);
   }.bind(this), 10);
 });
