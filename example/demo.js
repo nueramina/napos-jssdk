@@ -1,4 +1,4 @@
-napos.initialize(function(err, token) {
+napos.initialize('foo.bar.demoApp', function(err, token) {
   if (err) { throw err; }
   $('#token').text(JSON.stringify(token));
 
