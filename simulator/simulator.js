@@ -39,6 +39,25 @@ ns.registerHandler('restaurant.get', function() {
   }.bind(this), 10);
 });
 
+ns.registerHandler('view.goForward', function(params) {
+  this.res(window.location.href = params.url);
+  this.res(true);
+});
+
+ns.registerHandler('view.goBack', function(params) {
+  window.history.back();
+  this.res(true);
+});
+
+ns.registerHandler('view.getTitle', function(params) {
+  this.res(window.document.title);
+});
+
+ns.registerHandler('view.setTitle', function(params) {
+  window.document.title = params.title;
+  this.res(true);
+});
+
 angular.module('SimulatorApp', ['ngMaterial'])
   .controller('AppCtrl', ['$scope', '$mdDialog', '$sce', function($scope, $mdDialog, $sce) {
     $scope.appUrl = $sce.trustAsResourceUrl(Config.get().url);

@@ -11,4 +11,9 @@ napos.initialize('foo.bar.demoApp', function(err, token) {
     if (err) { throw err; }
     $('#restaurant').text(JSON.stringify(result));
   });
+
+  napos.rpc.invoke('view.setTitle', { title: 'Demo App' }, function(err, result) {
+    if (err) { throw err; }
+    $('#restaurant').text(JSON.stringify(result));
+  });
 });
