@@ -23,7 +23,7 @@ gulp
 
 获得`napos`句柄之后，可以通过`napos.rpc.invoke`进行RPC调用。
 
-首先进行初始化，如果没有初始化完成其他接口是不能被调用的，用于验证的TOKEN在这一步获取到：
+首先进行初始化，如果没有初始化完成其他接口是不能被调用的，用于认证的TOKEN在这一步获取到：
 ```
 napos.initialize('foo.bar.demoApp', function(err, token) {
   if (err) { /** handle error */ }
