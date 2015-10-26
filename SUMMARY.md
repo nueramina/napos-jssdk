@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [简介](doc/introduction.md)
-* 使用方法
+* [使用方法](doc/usage.md)
 
