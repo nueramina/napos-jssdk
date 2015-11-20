@@ -68,3 +68,7 @@
 ### view.goBack()
 
 返回到上一个历史URL。**由于性能考虑Napos Mobile客户端需要进行返回时显式调用该方法**。
+
+### allcarriers.onUpdate()
+
+通知Napos Mobile客户端更新配送状态。
