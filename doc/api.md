@@ -33,7 +33,7 @@
 
 ```
 {
-  "userId": "192927",
+  "userId": 192927,
   "username": "tester_01"
 }
 ```
@@ -44,12 +44,32 @@
 
 ```
 {
-  "id":"90000001",
-  "name":"test_restaurant",
-  "imageUrl":"http://baidu.com/logo.png",
-  "address":"sdfsdf"
+  "id": "22",
+  "name": "test_restaurant",
+  "imageUrl": "",
+  "address": "sdfsdf",
+  "certificationStatus": {
+    "businessLicense": {
+      "licenseStatus":"passed"
+    },
+    "serviceLicense": {
+      "licenseStatus": "failed"
+    }
+  },
+  "location":{
+    "latitude": 31.231765,
+    "longitude": 121.380794
+  },
+  "phones": ["18012341234","18043214321"]
 }
 ```
+其中`businessLicense`为营业执照状态,`serviceLicense`为服务许可证状态。
+
+认证状态有以下四种:
+* pending 验证中
+* passed 验证通过
+* failed 验证失败
+* unauthenticated 未验证
 
 ### view.setTitle(title)
 * **title** String
