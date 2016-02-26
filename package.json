@@ -1,5 +1,5 @@
 {
-  "name": "napos-jssdk",
+  "name": "@napos/napos-jssdk",
   "version": "0.3.3",
   "description": "Napos Client JS-SDK",
   "main": "index.js",
