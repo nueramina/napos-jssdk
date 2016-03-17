@@ -5,7 +5,7 @@ module.exports = {
     userId: 1741188,
     username: 'nptest_admin'
   },
-  allRestaurants: '22',
+  allRestaurants: '[{"id": 1, "name": "foo"}, {"id": 2, "name": "bar"}]',
   restaurant: {
     id: '22',
     name: 'test_restaurant',
@@ -16,6 +16,6 @@ module.exports = {
       serviceLicense:{ licenseStatus: 'failed' }
     },
     location: { latitude: 31.231765, longitude: 121.380794 },
-    phones: '18012341234,18043214321'
+    phones: '[18012341234, 18043214321]'
   }
 }

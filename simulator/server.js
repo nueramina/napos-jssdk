@@ -23,14 +23,14 @@ ns.registerHandler('profile.get', function() {
 ns.registerHandler('restaurant.get', function() {
   setTimeout(function() {
     var r = Config.get().restaurant;
-    r.phones = r.phones.split(',');
+    r.phones = JSON.parse(r.phones);
     this.res(r);
   }.bind(this), 10);
 });
 
 ns.registerHandler('restaurant.getAll', function() {
   setTimeout(function() {
-    var r = Config.get().allRestaurants.split(',');
+    var r = JSON.parse(Config.get().allRestaurants);
     this.res(r);
   }.bind(this), 10);
 });

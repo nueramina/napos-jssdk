@@ -43,7 +43,13 @@
 返回该keeper下所有餐厅列列表：
 
 ```
-[22, 11811]
+[{
+  "id": 1,
+  "name": "test_restaurant_01"
+}, {
+  "id": 2,
+  "name": "test_restaurant_02"
+}]
 ```
 
 ### restaurant.get()
@@ -52,7 +58,7 @@
 
 ```
 {
-  "id": "22",
+  "id": 22,
   "name": "test_restaurant",
   "imageUrl": "",
   "address": "sdfsdf",
