@@ -14,7 +14,7 @@
 ### napos.rpc.invoke(method, params, callback)
 * **method** String
 * **params** Object
-* **callback** Function 
+* **callback** Function
 
 进行RPC调用，Napos客户端这时相当于服务端。注意params参数为`{ key: value }` 结构。
 
@@ -106,3 +106,14 @@
 ### allcarriers.onUpdate()
 
 通知Napos Mobile客户端更新配送状态。
+
+### file.openChooser()
+
+打开文件选择器，并返回文件名以及内容(Blob)。
+
+```
+{
+  name: 'foo.png',
+  blob: Blob
+}
+```
