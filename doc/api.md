@@ -14,7 +14,7 @@
 ### napos.rpc.invoke(method, params, callback)
 * **method** String
 * **params** Object
-* **callback** Function 
+* **callback** Function
 
 进行RPC调用，Napos客户端这时相当于服务端。注意params参数为`{ key: value }` 结构。
 
@@ -38,13 +38,27 @@
 }
 ```
 
+### restaurant.getAll()
+
+返回该keeper下所有餐厅列列表：
+
+```
+[{
+  "id": 1,
+  "name": "test_restaurant_01"
+}, {
+  "id": 2,
+  "name": "test_restaurant_02"
+}]
+```
+
 ### restaurant.get()
 
 返回当前餐厅信息。餐厅信息结构示例：
 
 ```
 {
-  "id": "22",
+  "id": 22,
   "name": "test_restaurant",
   "imageUrl": "",
   "address": "sdfsdf",
@@ -92,3 +106,14 @@
 ### allcarriers.onUpdate()
 
 通知Napos Mobile客户端更新配送状态。
+
+### file.openChooser()
+
+打开文件选择器，并返回文件名以及内容(Blob)。
+
+```
+{
+  name: 'foo.png',
+  blob: Blob
+}
+```

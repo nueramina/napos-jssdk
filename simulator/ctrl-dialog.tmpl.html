@@ -1,109 +1,111 @@
-<md-dialog aria-label="Simulator" flex="66">
-  <form>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <h2>Simulator</h2>
-        <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
-          X
-        </md-button>
-      </div>
-    </md-toolbar>
-    <md-dialog-content>
-      <form name="projectForm">
-        <md-input-container>
-          <label>URL</label>
-          <input required ng-model="conf.url">
-        </md-input-container>
-        <md-input-container>
-          <label>TOKEN</label>
-          <input required ng-model="conf.token">
-        </md-input-container>
-        <div layout layout-sm="column">
-          <md-input-container flex>
-            <label>User ID</label>
-            <input ng-model="conf.profile.userId" type="number">
-          </md-input-container>
-          <md-input-container flex>
-            <label>Username</label>
-            <input ng-model="conf.profile.username">
-          </md-input-container>
-        </div>
-        <div layout layout-sm="column">
-          <md-input-container flex>
-            <label>Restaurant ID</label>
-            <input ng-model="conf.restaurant.id">
-          </md-input-container>
-          <md-input-container flex>
-            <label>Restaurant Name</label>
-            <input ng-model="conf.restaurant.name">
-          </md-input-container>
-        </div>
-        <md-input-container>
-          <label>Restaurant Avatar URL</label>
-          <input ng-model="conf.restaurant.imageUrl">
-        </md-input-container>
-        <md-input-container>
-          <label>Restaurant Address</label>
-          <input ng-model="conf.restaurant.address">
-        </md-input-container>
-        <md-input-container>
-          <label>Restaurant Phones (split with comma)</label>
-          <input ng-model="conf.restaurant.phones">
-        </md-input-container>
-        <div layout layout-sm="column">
-          <md-input-container flex>
-            <label>Business License Status</label>
-            <md-select ng-model="conf.restaurant.certificationStatus.businessLicense.licenseStatus">
-              <md-option value="pending">
-                Pending
-              </md-option>
-              <md-option value="passed">
-                Passed
-              </md-option>
-              <md-option value="failed">
-                Failed
-              </md-option>
-              <md-option value="unauthenticated">
-                Unauthenticated
-              </md-option>
-            </md-select>
-          </md-input-container>
-          <md-input-container flex>
-            <label>Service License Status</label>
-            <md-select ng-model="conf.restaurant.certificationStatus.serviceLicense.licenseStatus">
-              <md-option value="pending">
-                Pending
-              </md-option>
-              <md-option value="passed">
-                Passed
-              </md-option>
-              <md-option value="failed">
-                Failed
-              </md-option>
-              <md-option value="unauthenticated">
-                Unauthenticated
-              </md-option>
-            </md-select>
-          </md-input-container>
-        </div>
-        <div layout layout-sm="column">
-          <md-input-container flex>
-            <label>Location Latitude</label>
-            <input ng-model="conf.restaurant.location.latitude" type="number">
-          </md-input-container>
-          <md-input-container flex>
-            <label>Location Longitude</label>
-            <input ng-model="conf.restaurant.location.longitude" type="number">
-          </md-input-container>
-        </div>
-      </form>
-    </md-dialog-content>
-    <div class="md-actions" layout="row">
+<md-dialog aria-label="Simulator" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Simulator</h2>
       <span flex></span>
-      <md-button ng-click="confirm(conf)" class="md-primary">
-        Confirm
+      <md-button class="md-icon-button" ng-click="cancel()">
+        X
       </md-button>
     </div>
-  </form>
+  </md-toolbar>
+  <md-dialog-content>
+    <form name="ctrlForm">
+      <md-input-container>
+        <label>URL</label>
+        <input required ng-model="conf.url">
+      </md-input-container>
+      <md-input-container>
+        <label>TOKEN</label>
+        <input required ng-model="conf.token">
+      </md-input-container>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>User ID</label>
+          <input ng-model="conf.profile.userId" type="number">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Username</label>
+          <input ng-model="conf.profile.username">
+        </md-input-container>
+      </div>
+      <md-input-container>
+        <label>All Restaurants (JSON string)</label>
+        <input ng-model="conf.allRestaurants">
+      </md-input-container>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>Current Restaurant ID</label>
+          <input ng-model="conf.restaurant.id">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Restaurant Name</label>
+          <input ng-model="conf.restaurant.name">
+        </md-input-container>
+      </div>
+      <md-input-container>
+        <label>Restaurant Avatar URL</label>
+        <input ng-model="conf.restaurant.imageUrl">
+      </md-input-container>
+      <md-input-container>
+        <label>Restaurant Address</label>
+        <input ng-model="conf.restaurant.address">
+      </md-input-container>
+      <md-input-container>
+        <label>Restaurant Phones (JSON string)</label>
+        <input ng-model="conf.restaurant.phones">
+      </md-input-container>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>Business License Status</label>
+          <md-select ng-model="conf.restaurant.certificationStatus.businessLicense.licenseStatus">
+            <md-option value="pending">
+              Pending
+            </md-option>
+            <md-option value="passed">
+              Passed
+            </md-option>
+            <md-option value="failed">
+              Failed
+            </md-option>
+            <md-option value="unauthenticated">
+              Unauthenticated
+            </md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container flex>
+          <label>Service License Status</label>
+          <md-select ng-model="conf.restaurant.certificationStatus.serviceLicense.licenseStatus">
+            <md-option value="pending">
+              Pending
+            </md-option>
+            <md-option value="passed">
+              Passed
+            </md-option>
+            <md-option value="failed">
+              Failed
+            </md-option>
+            <md-option value="unauthenticated">
+              Unauthenticated
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>Location Latitude</label>
+          <input ng-model="conf.restaurant.location.latitude" type="number">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Location Longitude</label>
+          <input ng-model="conf.restaurant.location.longitude" type="number">
+        </md-input-container>
+      </div>
+    </form>
+  </md-dialog-content>
+  <div class="md-actions" layout="row">
+    <span flex></span>
+    <md-button ng-click="confirm(conf)" class="md-primary">
+      Confirm
+    </md-button>
+  </div>
 </md-dialog>
