@@ -5,9 +5,9 @@ module.exports = {
     userId: 1741188,
     username: 'nptest_admin'
   },
-  allRestaurants: '[{"id": 1, "name": "foo"}, {"id": 2, "name": "bar"}]',
+  allRestaurants: '[{"id": 23585734, "name": "爱丽丝测试餐厅1"}]',
   restaurant: {
-    id: '22',
+    id: '23585734',
     name: 'test_restaurant',
     imageUrl: '',
     address: 'sdfsdf',
