@@ -117,3 +117,7 @@
   blob: Blob
 }
 ```
+
+### browser.isAppInstalled(packageName)
+
+用于判断设备上是否安装某个应用程序，传入该应用的appId，返回boolean值。
